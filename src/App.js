@@ -9,6 +9,7 @@ import Team from './components/Team';
 import Nav from './components/Nav';
 import Weather from './components/Weather';
 import Recipes from './components/Recipes';
+import { Button } from 'react-bootstrap';
 
 
 import {
@@ -18,24 +19,64 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    // USE THIS COORDINATE SET UP AS NEEDED
+    this.state = {
+      location: {
+        lat: 0,
+        lon: 0,
+      }
+    }
+  }
+
+
+  handleGeolocationAPI = (position) => {
+    this.setState({
+      location: {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude,
+      }
+    });
+
+  };
+
+  getLocation = () => {
+    navigator.geolocation.getCurrentPosition(this.handleGeolocationAPI);
+    //this is cleared every time the page is reset. Need mechanism to cache location for a few minutes while
+  }
+
+
+
+
   render() {
+    console.log(this.state.location.lat);
     return (
       <>
         <Router>
+          <Button variant="primary" onClick={this.getLocation}>GetLocation</Button>
+          {this.state.location.lat ?
+            <>
+              <p>Latitude: {this.state.location.lat}</p>
+              <p>Longitude: {this.state.location.lon}</p>
+            </>
+            : false
+          }
           <Routes>
             <Route
-              path='home'
+              exact path='/'
               element={<Home />}
             >
             </Route>
             <Route
               path='go-out'
-              element={<GoOut />}
+              element={<GoOut location={this.state.location} />}
             >
             </Route>
             <Route
               path='stay-in'
-              element={<StayIn />}
+              element={<StayIn location={this.state.location} />}
             >
             </Route>
             <Route
@@ -55,7 +96,7 @@ class App extends React.Component {
             </Route>
             <Route
               path='weather'
-              element={<Weather />}
+              element={<Weather location={this.state.location} />}
             >
             </Route>
           </Routes>
