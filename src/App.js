@@ -8,6 +8,8 @@ import Profile from './components/Profile';
 import Team from './components/Team';
 import Nav from './components/Nav';
 import Weather from './components/Weather';
+import Recipes from './components/Recipes';
+
 
 import {
   BrowserRouter as Router,
@@ -34,6 +36,11 @@ class App extends React.Component {
             <Route
               path='stay-in'
               element={<StayIn />}
+            >
+            </Route>
+            <Route
+              path='recipes'
+              element={<Recipes />}
             >
             </Route>
             <Route
