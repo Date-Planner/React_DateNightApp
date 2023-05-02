@@ -11,6 +11,11 @@ import Weather from './components/Weather';
 import Recipes from './components/Recipes';
 import { Button } from 'react-bootstrap';
 
+import LoginButton from './components/Login';
+import LogoutButton from './components/Logout';
+import { withAuth0 } from "@auth0/auth0-react";
+import TempProfile from './components/TempProfile';
+
 
 import {
   BrowserRouter as Router,
@@ -55,56 +60,65 @@ class App extends React.Component {
     return (
       <>
         <Router>
-          <Button variant="primary" onClick={this.getLocation}>GetLocation</Button>
-          {this.state.location.lat ?
-            <>
-              <p>Latitude: {this.state.location.lat}</p>
-              <p>Longitude: {this.state.location.lon}</p>
-            </>
-            : false
+          {
+            this.props.auth0.isAuthenticated ?
+              <>
+                <TempProfile />
+                <LogoutButton />
+                <Button variant="primary" onClick={this.getLocation}>GetLocation</Button>
+                {this.state.location.lat ?
+                  <>
+                    <p>Latitude: {this.state.location.lat}</p>
+                    <p>Longitude: {this.state.location.lon}</p>
+                  </>
+                  : false
+                }
+                <Routes>
+                  <Route
+                    exact path='/'
+                    element={<Home />}
+                  >
+                  </Route>
+                  <Route
+                    path='go-out'
+                    element={<GoOut location={this.state.location} />}
+                  >
+                  </Route>
+                  <Route
+                    path='stay-in'
+                    element={<StayIn location={this.state.location} />}
+                  >
+                  </Route>
+                  <Route
+                    path='recipes'
+                    element={<Recipes />}
+                  >
+                  </Route>
+                  <Route
+                    path='profile'
+                    element={<Profile />}
+                  >
+                  </Route>
+                  <Route
+                    path='team'
+                    element={<Team />}
+                  >
+                  </Route>
+                  <Route
+                    path='weather'
+                    element={<Weather location={this.state.location} />}
+                  >
+                  </Route>
+                </Routes>
+                <Nav />
+              </>
+              :
+              <LoginButton />
           }
-          <Routes>
-            <Route
-              exact path='/'
-              element={<Home />}
-            >
-            </Route>
-            <Route
-              path='go-out'
-              element={<GoOut location={this.state.location} />}
-            >
-            </Route>
-            <Route
-              path='stay-in'
-              element={<StayIn location={this.state.location} />}
-            >
-            </Route>
-            <Route
-              path='recipes'
-              element={<Recipes />}
-            >
-            </Route>
-            <Route
-              path='profile'
-              element={<Profile />}
-            >
-            </Route>
-            <Route
-              path='team'
-              element={<Team />}
-            >
-            </Route>
-            <Route
-              path='weather'
-              element={<Weather location={this.state.location} />}
-            >
-            </Route>
-          </Routes>
-          <Nav />
         </Router>
       </>
     )
   }
 }
 
-export default App;
+export default withAuth0(App);
