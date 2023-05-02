@@ -113,7 +113,8 @@ class App extends React.Component {
                 <Nav />
               </>
               :
-              <LoginButton />
+             <> <LoginButton />
+              <Nav /></>
           }
         </Router>
       </>
