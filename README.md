@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Name of Project- Date Night Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary of the idea.
 
-## Available Scripts
+Introducing the ultimate date night app – perfect for couples who love spending quality time together but struggle with planning the perfect evening. Our app allows users to choose between going out or staying in, ensuring that you can always find the perfect date night! With a wide variety of options for both going out and staying in, our app provides something for every couple. From romantic dinners at the hottest restaurants to cozy nights with homemade meals and movies, we've got you covered. Our app also features a user-friendly interface, making it easy to navigate and find the perfect places for your date night.
 
-In the project directory, you can run:
+## What problem or pain point does it solve? a. Keep it high level without going into too much detail. (3-4 sentences is enough)
 
-### `npm start`
+The ultimate date night app solves the problem of couples struggling to plan the perfect evening. It offers a wide range of options for both going out and staying in, making it easier for couples to find the perfect dining and movie option that suits their mood and schedule with the staying in and going out options.  The app also provides past history favorites for the user that way if one special night was unforgettable you are able to easily do it all over again with the favorited items section.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Minimum Viable Product (MVP) definition.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+What is the minimum required for you to present on your demo day?
+Have an app that allows the user to choose between staying-in and going-out with the integration of both a movie api and yelp API, as well as have about 3 recipes that will generate based on the choice of staying and they will be random based on the data base stored recipes. 
 
-### `npm test`
+## Software Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Vision
 
-### `npm run build`
+* What is the vision of this product?<br>
+Introducing the ultimate date night app – perfect for couples who love spending quality time together but struggle with planning the perfect evening. Our app allows users to choose between going out or staying in, ensuring that you can always find the perfect date night! With a wide variety of options for both going out and staying in, our app provides something for every couple. From romantic dinners at the hottest restaurants to cozy nights with homemade meals and movies, we've got you covered. Our app also features a user-friendly interface, making it easy to navigate and find the perfect places for your date night.
+* What pain point does this project solve?<br>
+The ultimate date night app solves the problem of couples struggling to plan the perfect evening. It offers a wide range of options for both going out and staying in, making it easier for couples to find the perfect dining and movie option that suits their mood and schedule with the staying in and going out options.  The app also provides past history favorites for the user that way if one special night was unforgettable you are able to easily do it all over again with the favorites items section.
+* Why should we care about your product?<br>
+You should care about our product if you are a couple who loves spending quality time together but struggle with planning the perfect evening. Our app takes the stress out of planning by providing a wide variety of options for both going out and staying in, ensuring that you can always find the perfect date night. With a user-friendly interface, our app makes it easy to navigate and find the perfect places for your date night. Whether you prefer romantic dinners at the hottest restaurants or cozy nights with homemade meals and movies, our app has something for every couple. So if you want to take the hassle out of planning your next date night and make it a memorable one, our app is the perfect solution.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Scope (In/Out)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### IN - What will your product do
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* The application will provide the ability to log in and out of the application, while it saves the information of the user and securely stores it, making only accessible to user. It will also provide the option to delete the user profile.
+* The application will provide the ability to make recommendation to where to take the user based on user selections.
+* The application will provide user access to recipes.
+* The application will provide a mechanical to tailored user's dates from a set of predetermined options.
+* The application will provide date recommendations based of the weather.
 
-### `npm run eject`
+### OUT - What will your product not do
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* The application will not make recommendations based on predetermined preferences.
+* The application will not take dietary restrictions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Minimum Viable Product
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* What will your MVP functionality be?<br>
+To have a tailored experience for the user based on staying-in and going out. Allows the user to get a recipe, dinner places, and a movie.
+* What are your stretch goals?<br>
+Have a user experience that has data listed as dates and past selections that they have rated for a possible future idea.
+* What stretch goals are you going to aim for?<br>
+To have two separate versions one being for couples and the other being for self care.
